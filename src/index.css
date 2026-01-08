@@ -1,8 +1,8 @@
-/* React Easy Crop Styles */
-@import 'react-easy-crop/react-easy-crop.css';
+/* React Easy Crop Styles - Commented out as not used in landing page */
+/* @import 'react-easy-crop/react-easy-crop.css'; */
 
-/* React Day Picker Styles */
-@import 'react-day-picker/style.css';
+/* React Day Picker Styles - Commented out as not used in landing page */
+/* @import 'react-day-picker/style.css'; */
 
 @tailwind base;
 @tailwind components;

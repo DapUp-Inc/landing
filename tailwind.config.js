@@ -19,7 +19,7 @@ export default {
   				'sans-serif'
   			],
   			display: [
-  				'Space Grotesk"',
+  				'Space Grotesk',
   				'Inter',
   				'SF Pro Display',
   				'-apple-system',
