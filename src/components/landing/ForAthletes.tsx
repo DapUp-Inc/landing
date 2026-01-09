@@ -131,29 +131,6 @@ const ForAthletes = () => {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <motion.div
-          className="mt-20 xl2:mt-24 2xl:mt-28"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="bg-gradient-dark border border-white/10 rounded-3xl p-12 xl2:p-16 2xl:p-20 text-center">
-            <div className="flex justify-center mb-6 xl2:mb-8">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 xl2:w-7 xl2:h-7 text-primary-500 fill-current" />
-              ))}
-            </div>
-            <blockquote className="text-xl xl2:text-2xl text-gray-300 mb-6 xl2:mb-8 max-w-3xl xl2:max-w-4xl mx-auto italic">
-              "DapUp made it so easy to monetize my social media while staying compliant.
-              I've worked with amazing brands and earned more than I ever thought possible."
-            </blockquote>
-            <div className="text-white font-semibold xl2:text-lg">Sarah M.</div>
-            <div className="text-gray-400 text-sm xl2:text-base">Division I Basketball Player</div>
-          </div>
-        </motion.div>
-
         {/* CTA Section */}
         <div className="mt-16 xl2:mt-20 2xl:mt-24 text-center">
           <h3 className="font-display text-2xl md:text-3xl xl2:text-4xl font-semibold text-white mb-3 xl2:mb-4">

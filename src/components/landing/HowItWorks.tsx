@@ -10,14 +10,14 @@ const steps = [
   },
   {
     icon: Zap,
-    title: "Automated Matching",
-    description: "We match brands with the right athletes using performance and audience data.",
+    title: "Match with your Ideal Athletes",
+    description: "Brands collaborate with athletes whose values, audience, and goals align with each campaign",
     color: "primary"
   },
   {
     icon: TrendingUp,
     title: "Track Performance",
-    description: "Monitor campaign performance with real-time analytics and transparent reporting.",
+    description: "See campaign activity at a glance and keep track of athlete participation as campaigns move forward.",
     color: "primary"
   }
 ];

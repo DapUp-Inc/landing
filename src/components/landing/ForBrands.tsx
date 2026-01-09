@@ -17,19 +17,19 @@ const features = [
   {
     icon: BarChart3,
     title: "Performance Tracking",
-    description: "Real-time analytics dashboard showing engagement rates, conversions, and ROI across all campaigns.",
+    description: "Track campaign progress through clear deliverables, timelines, and athlete participation.",
     highlight: "Live performance data"
   },
   {
     icon: Users,
     title: "Audience Insights",
-    description: "Deep analytics on athlete audiences including demographics, interests, and engagement patterns.",
+    description: "Explore athlete audiences through direct access to their social media profiles and public engagement.",
     highlight: "Detailed audience data"
   },
   {
     icon: Shield,
-    title: "Compliance Assured",
-    description: "Built-in NIL compliance monitoring ensures all partnerships meet NCAA and state regulations.",
+    title: "Transparent Partnerships",
+    description: "Campaign term sheets generated in-app to help align expectations and promote transparent partnerships between athletes and brands.",
     highlight: "Regulatory compliance"
   },
   {
@@ -99,10 +99,10 @@ const ForBrands = () => {
           className="mt-14 xl2:mt-16 2xl:mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 xl2:gap-12 2xl:gap-16"
         >
           {[
-            { value: "3.5x", label: "Higher Engagement", subtitle: "vs traditional ads" },
-            { value: "85%", label: "Cost Reduction", subtitle: "in campaign setup" },
-            { value: "24/7", label: "Compliance Monitoring", subtitle: "automated oversight" },
-            { value: "Real-time", label: "Performance Data", subtitle: "instant insights" }
+            { value: "10x", label: "Higher Engagement", subtitle: "vs traditional ads" },
+            { value: "478%", label: "ROI", subtitle: "$5.78 for every $1 Spent" },
+            { value: "24/7", label: "Campaign Monitoring", subtitle: "Campaign details and terms available anytime" },
+            { value: "Real-Time", label: "Insights into campaign progress", subtitle: "Instant Insights" }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl xl2:text-5xl font-bold bg-gradient-gold-blue bg-clip-text text-transparent mb-2">

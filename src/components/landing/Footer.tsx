@@ -17,24 +17,18 @@ const Footer = () => {
       { name: 'For Athletes', href: '#for-athletes' },
     ],
     Company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/contact' }
+      { name: 'About Us', href: '#' },
+      { name: 'Blog', href: '#' },
+      { name: 'Contact', href: '#' }
     ],
     Legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' }
+      { name: 'Privacy Policy', href: '#' },
+      { name: 'Terms of Service', href: '#' }
     ]
   };
 
   return (
     <footer className="bg-dark-900 border-t border-white/10 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-primary-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-tech-blue/5 rounded-full blur-3xl" />
-      </div>
-
       <div className="max-w-7xl xl2:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-6 lg:px-8 xl:px-10 xl2:px-12 2xl:px-16 relative z-10">
         {/* Main Footer Content */}
         <div className="py-14 xl2:py-16 2xl:py-20">

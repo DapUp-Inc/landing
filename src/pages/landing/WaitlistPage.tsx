@@ -14,12 +14,7 @@ const WaitlistPage = () => {
       <LandingNav />
 
       <main className="pt-28 md:pt-32">
-        <section className="relative overflow-hidden pb-10">
-          <div className="absolute inset-0">
-            <div className="absolute top-10 right-1/4 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-10 left-1/4 w-72 h-72 bg-tech-blue/10 rounded-full blur-3xl" />
-          </div>
-
+        <section className="relative overflow-hidden pb-10 bg-dark-850">
           <div className="relative max-w-5xl mx-auto px-6 lg:px-8 xl:px-10 xl2:px-12">
             <div className="text-center mb-10 md:mb-14">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-500/15 border border-primary-500/30 text-primary-300 text-sm font-semibold mb-4">

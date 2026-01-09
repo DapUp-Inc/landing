@@ -40,13 +40,7 @@ const EarlyAccessSignup = () => {
   ];
 
   return (
-    <section className="py-24 bg-dark-900 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-tech-blue/10 rounded-full blur-3xl" />
-      </div>
-
+    <section className="py-24 bg-dark-800 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div 
@@ -62,7 +56,7 @@ const EarlyAccessSignup = () => {
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Join the
-            <span className="block bg-gradient-gold-blue bg-clip-text text-transparent">
+            <span className="block text-primary-400">
               Waitlist
             </span>
           </h2>
@@ -73,8 +67,8 @@ const EarlyAccessSignup = () => {
         </motion.div>
 
         {/* Main Signup Form */}
-        <motion.div 
-          className="bg-gradient-dark border border-white/10 rounded-3xl p-12 mb-16"
+        <motion.div
+          className="bg-dark-900 border border-white/10 rounded-3xl p-12 mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
