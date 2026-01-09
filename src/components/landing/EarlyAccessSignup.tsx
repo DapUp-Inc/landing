@@ -1,24 +1,43 @@
 import { motion } from 'framer-motion';
-import { Mail, ArrowRight, Users, Zap, Shield } from 'lucide-react';
+import { Mail, ArrowRight, Users, Zap, Shield, Loader2, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
+import { submitWaitlist } from '../../services/googleAppsScript';
 
 const EarlyAccessSignup = () => {
   const [email, setEmail] = useState('');
   const [userType, setUserType] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Email:', email, 'User Type:', userType);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setEmail('');
-      setUserType('');
-    }, 3000);
+    setError(null);
+    setIsLoading(true);
+
+    try {
+      const result = await submitWaitlist({
+        email: email.trim(),
+        userType: userType as 'athlete' | 'brand' | 'university',
+      });
+
+      if (result.success) {
+        setIsSubmitted(true);
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setEmail('');
+          setUserType('');
+        }, 5000);
+      } else {
+        setError(result.error || 'Failed to join waitlist. Please try again.');
+      }
+    } catch (err) {
+      setError('An unexpected error occurred. Please try again.');
+      console.error('Waitlist submission error:', err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const benefits = [
@@ -137,16 +156,37 @@ const EarlyAccessSignup = () => {
                 </div>
               </div>
 
+              {/* Error Message */}
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400"
+                >
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <span className="text-sm">{error}</span>
+                </motion.div>
+              )}
+
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                disabled={!email || !userType}
+                disabled={!email || !userType || isLoading}
                 className="w-full py-4 bg-primary-500 hover:bg-primary-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-dark-900 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary-500/25 text-lg flex items-center justify-center"
-                whileHover={email && userType ? { scale: 1.02 } : {}}
-                whileTap={email && userType ? { scale: 0.98 } : {}}
+                whileHover={email && userType && !isLoading ? { scale: 1.02 } : {}}
+                whileTap={email && userType && !isLoading ? { scale: 0.98 } : {}}
               >
-                <span>Join Early Access Waitlist</span>
-                <ArrowRight className="ml-2 w-5 h-5" />
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    <span>Submitting...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Join Early Access Waitlist</span>
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </>
+                )}
               </motion.button>
             </form>
           ) : (
