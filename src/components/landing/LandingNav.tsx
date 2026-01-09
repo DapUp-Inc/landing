@@ -31,8 +31,8 @@ const LandingNav = () => {
                 <Logo className="h-6 xl2:h-7 w-auto" />
               </Link>
           {/* Floating Pill Container */}
-          <div className="bg-white/10 backdrop-blur-md backdrop-saturate-150 border border-white/20 rounded-full pl-6 xl2:pl-8 pr-12 xl2:pr-14 py-2.5 xl2:py-3 shadow-lg shadow-black/20 w-fit">
-            <div className="flex items-center gap-16 xl2:gap-20 2xl:gap-24">
+          <div className="bg-white/10 backdrop-blur-md backdrop-saturate-150 border border-white/20 rounded-full pl-4 md:pl-6 xl2:pl-8 pr-4 md:pr-12 xl2:pr-14 py-2 md:py-2.5 xl2:py-3 shadow-lg shadow-black/20 w-fit">
+            <div className="flex items-center gap-4 md:gap-16 xl2:gap-20 2xl:gap-24">
 
               {/* Desktop Navigation - Center */}
               <div className="hidden md:flex items-center space-x-12 lg:space-x-14 xl2:space-x-16 2xl:space-x-20">
@@ -98,16 +98,16 @@ const LandingNav = () => {
 
       {/* Mobile Menu */}
       <motion.div
-        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
+        className={`md:hidden fixed top-14 left-0 right-0 z-40 ${isMenuOpen ? 'block' : 'hidden'}`}
         initial={{ opacity: 0, height: 0 }}
-        animate={{ 
-          opacity: isMenuOpen ? 1 : 0, 
-          height: isMenuOpen ? 'auto' : 0 
+        animate={{
+          opacity: isMenuOpen ? 1 : 0,
+          height: isMenuOpen ? 'auto' : 0
         }}
         transition={{ duration: 0.3 }}
       >
-        <div className="bg-dark-900/60 backdrop-blur-xl border-t border-white/10">
-          <div className="px-6 py-4 space-y-4">
+        <div className="bg-dark-900/95 backdrop-blur-xl border-t border-white/10">
+          <div className="px-4 py-4 space-y-3">
             {navItems.map((item, index) => (
               item.isLink ? (
                 <Link

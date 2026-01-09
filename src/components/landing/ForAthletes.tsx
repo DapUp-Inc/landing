@@ -43,20 +43,20 @@ const benefits = [
 
 const ForAthletes = () => {
   return (
-    <section className="py-20 xl:py-24 xl2:py-28 2xl:py-32 bg-gradient-to-b from-dark-800 to-dark-900 relative overflow-hidden">
+    <section className="py-14 md:py-20 xl:py-24 xl2:py-28 2xl:py-32 bg-gradient-to-b from-dark-800 to-dark-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0" />
 
-      <div className="max-w-7xl xl2:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-6 lg:px-8 xl:px-10 xl2:px-12 2xl:px-16 relative z-10">
+      <div className="max-w-7xl xl2:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 xs:px-5 md:px-6 lg:px-8 xl:px-10 xl2:px-12 2xl:px-16 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl xl2:max-w-4xl mb-14 xl2:mb-16 2xl:mb-20">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary-500/15 border border-primary-500/25 text-primary-300 text-xs xl2:text-sm font-medium mb-5">
+        <div className="max-w-3xl xl2:max-w-4xl mb-10 md:mb-14 xl2:mb-16 2xl:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary-500/15 border border-primary-500/25 text-primary-300 text-xs xl2:text-sm font-medium mb-4 md:mb-5">
             For College Athletes
           </div>
-          <h2 className="font-display text-3xl md:text-5xl xl2:text-6xl font-semibold text-white mb-4 xl2:mb-6">
+          <h2 className="font-display text-2xl xs:text-3xl md:text-5xl xl2:text-6xl font-semibold text-white mb-3 md:mb-4 xl2:mb-6">
             Monetize Your Athletic Brand
           </h2>
-          <p className="text-lg xl2:text-xl text-gray-300">
+          <p className="text-base md:text-lg xl2:text-xl text-gray-300">
             Turn your social presence into real income with compliant, high‑quality partnerships.
           </p>
         </div>
@@ -97,13 +97,13 @@ const ForAthletes = () => {
 
         {/* How It Works for Athletes */}
         <div
-          className="mt-14 xl2:mt-16 2xl:mt-20"
+          className="mt-10 md:mt-14 xl2:mt-16 2xl:mt-20"
         >
-          <h3 className="font-display text-2xl md:text-3xl xl2:text-4xl font-semibold text-white text-center mb-10 xl2:mb-12">
+          <h3 className="font-display text-xl xs:text-2xl md:text-3xl xl2:text-4xl font-semibold text-white text-center mb-8 md:mb-10 xl2:mb-12">
             How Athletes Get Started
           </h3>
 
-          <div className="grid md:grid-cols-4 gap-8 xl2:gap-12 2xl:gap-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 xl2:gap-12 2xl:gap-16">
             {[
               { step: "1", title: "Create Profile", desc: "Upload your stats, social media, and athletic achievements" },
               { step: "2", title: "Get Matched", desc: "Our AI connects you with relevant brand opportunities" },
@@ -115,33 +115,33 @@ const ForAthletes = () => {
                 className="text-center relative"
               >
                 {/* Step Number */}
-                <div className="w-12 h-12 xl2:w-14 xl2:h-14 bg-gradient-to-r from-tech-cyan to-primary-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-lg xl2:text-xl mx-auto mb-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 xl2:w-14 xl2:h-14 bg-gradient-to-r from-tech-cyan to-primary-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-base md:text-lg xl2:text-xl mx-auto mb-3 md:mb-4">
                   {item.step}
                 </div>
 
                 {/* Connection Line */}
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-6 xl2:top-7 left-full w-full h-px bg-gradient-to-r from-tech-cyan/50 to-transparent -z-10" />
+                  <div className="hidden md:block absolute top-5 md:top-6 xl2:top-7 left-full w-full h-px bg-gradient-to-r from-tech-cyan/50 to-transparent -z-10" />
                 )}
 
-                <h4 className="text-lg xl2:text-xl font-semibold text-white mb-2">{item.title}</h4>
-                <p className="text-gray-400 text-sm xl2:text-base">{item.desc}</p>
+                <h4 className="text-base md:text-lg xl2:text-xl font-semibold text-white mb-1 md:mb-2">{item.title}</h4>
+                <p className="text-gray-400 text-xs md:text-sm xl2:text-base">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 xl2:mt-20 2xl:mt-24 text-center">
-          <h3 className="font-display text-2xl md:text-3xl xl2:text-4xl font-semibold text-white mb-3 xl2:mb-4">
+        <div className="mt-12 md:mt-16 xl2:mt-20 2xl:mt-24 text-center">
+          <h3 className="font-display text-xl xs:text-2xl md:text-3xl xl2:text-4xl font-semibold text-white mb-2 md:mb-3 xl2:mb-4">
             Ready to Start Earning?
           </h3>
-          <p className="text-gray-300 xl2:text-lg mb-6 xl2:mb-8 max-w-2xl xl2:max-w-3xl mx-auto">
+          <p className="text-gray-300 text-sm md:text-base xl2:text-lg mb-5 md:mb-6 xl2:mb-8 max-w-2xl xl2:max-w-3xl mx-auto">
             Join college athletes earning through authentic brand partnerships.
           </p>
           <button
             type="button"
-            className="px-6 py-3 xl2:px-8 xl2:py-4 xl2:text-lg bg-primary-500 text-dark-900 font-semibold rounded-lg"
+            className="px-5 py-2.5 md:px-6 md:py-3 xl2:px-8 xl2:py-4 xl2:text-lg bg-primary-500 text-dark-900 font-semibold rounded-lg"
             onClick={(e) => e.preventDefault()}
           >
             Join Waitlist

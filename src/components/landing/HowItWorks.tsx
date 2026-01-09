@@ -24,7 +24,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 xl:py-24 xl2:py-28 2xl:py-32 bg-dark-800 relative overflow-hidden">
+    <section className="py-14 md:py-20 xl:py-24 xl2:py-28 2xl:py-32 bg-dark-800 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -33,13 +33,13 @@ const HowItWorks = () => {
         }} />
       </div>
 
-      <div className="max-w-7xl xl2:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-6 lg:px-8 xl:px-10 xl2:px-12 2xl:px-16 relative z-10">
+      <div className="max-w-7xl xl2:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 xs:px-5 md:px-6 lg:px-8 xl:px-10 xl2:px-12 2xl:px-16 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-14 xl2:mb-16 2xl:mb-20">
-          <h2 className="font-display text-3xl md:text-5xl xl2:text-6xl font-semibold text-white mb-4 xl2:mb-6">
+        <div className="text-center mb-10 md:mb-14 xl2:mb-16 2xl:mb-20">
+          <h2 className="font-display text-2xl xs:text-3xl md:text-5xl xl2:text-6xl font-semibold text-white mb-3 md:mb-4 xl2:mb-6">
             How It Works
           </h2>
-          <p className="text-lg xl2:text-xl text-gray-300 max-w-3xl xl2:max-w-4xl mx-auto">How to Grow Your Brand Using DapUp</p>
+          <p className="text-base md:text-lg xl2:text-xl text-gray-300 max-w-3xl xl2:max-w-4xl mx-auto">How to Grow Your Brand Using DapUp</p>
         </div>
 
         {/* Steps - Horizontal Layout */}
@@ -49,7 +49,7 @@ const HowItWorks = () => {
             className="hidden lg:block absolute left-0 right-0 top-14 md:top-16 h-px bg-gradient-to-r from-transparent via-primary-500/25 to-transparent"
             aria-hidden="true"
           />
-          <div className="relative z-10 grid md:grid-cols-3 gap-8 lg:gap-12 xl2:gap-16 2xl:gap-20">
+          <div className="relative z-10 grid md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 xl2:gap-16 2xl:gap-20">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (

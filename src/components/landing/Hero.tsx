@@ -85,18 +85,18 @@ const Hero = () => {
             <div className="pt-5 md:pt-6 xl2:pt-8 border-t border-white/10 mt-6 xl2:mt-8">
               <p className="text-gray-400 text-xs md:text-sm xl2:text-base mb-4 md:mb-6 font-medium">Building relationships with athletes, universities and businesses</p>
               <p className="text-gray-500 text-xs xl2:text-sm mb-3 xl2:mb-4 font-medium">Potential Reach via DapUp</p>
-              <div className="flex gap-12 xl2:gap-16 2xl:gap-20">
+              <div className="grid grid-cols-3 gap-4 xs:gap-6 md:gap-12 xl2:gap-16 2xl:gap-20">
                 <div>
-                  <div className="text-xl md:text-2xl xl2:text-3xl font-bold text-primary-400 mb-1">520,000+</div>
-                  <div className="text-gray-500 text-sm xl2:text-base font-medium">NCAA Athletes</div>
+                  <div className="text-lg xs:text-xl md:text-2xl xl2:text-3xl font-bold text-primary-400 mb-1">520,000+</div>
+                  <div className="text-gray-500 text-xs xs:text-sm xl2:text-base font-medium">NCAA Athletes</div>
                 </div>
                 <div>
-                  <div className="text-xl md:text-2xl xl2:text-3xl font-bold text-primary-400 mb-1">1,100+</div>
-                  <div className="text-gray-500 text-sm xl2:text-base font-medium">NCAA Schools</div>
+                  <div className="text-lg xs:text-xl md:text-2xl xl2:text-3xl font-bold text-primary-400 mb-1">1,100+</div>
+                  <div className="text-gray-500 text-xs xs:text-sm xl2:text-base font-medium">NCAA Schools</div>
                 </div>
                 <div>
-                  <div className="text-xl md:text-2xl xl2:text-3xl font-bold text-primary-400 mb-1">$1.67B</div>
-                  <div className="text-gray-500 text-sm xl2:text-base font-medium">NIL Market Size</div>
+                  <div className="text-lg xs:text-xl md:text-2xl xl2:text-3xl font-bold text-primary-400 mb-1">$1.67B</div>
+                  <div className="text-gray-500 text-xs xs:text-sm xl2:text-base font-medium">NIL Market Size</div>
                 </div>
               </div>
             </div>
