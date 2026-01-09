@@ -28,3 +28,7 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# gh-pages deployment cache
+.cache
+.gh-pages-cache
