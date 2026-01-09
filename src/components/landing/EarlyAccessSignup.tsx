@@ -245,29 +245,6 @@ const EarlyAccessSignup = () => {
           })}
         </motion.div>
 
-        {/* Bottom Stats */}
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div>
-              <div className="text-2xl font-bold text-primary-500 mb-1">2,500+</div>
-              <div className="text-gray-400 text-sm">On Waitlist</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-tech-blue mb-1">150+</div>
-              <div className="text-gray-400 text-sm">Athletes Signed</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-tech-cyan mb-1">25+</div>
-              <div className="text-gray-400 text-sm">Brand Partners</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
