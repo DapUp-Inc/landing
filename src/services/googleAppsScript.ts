@@ -12,14 +12,14 @@
 const GOOGLE_APPS_SCRIPT_URL = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL || 
   'https://script.google.com/macros/s/AKfycbxF__F9gaSOq107B7x8pXXwcie0ReJGVnJh_5dvP98aIJEkRlP_SEfgg5ZEuc_P1kA/exec';
 
-// Debug logging
-console.log('Google Apps Script URL:', GOOGLE_APPS_SCRIPT_URL ? 'Configured' : 'Missing');
-
-// Debug: Log the URL (remove in production if needed)
-if (!GOOGLE_APPS_SCRIPT_URL) {
-  console.warn('VITE_GOOGLE_APPS_SCRIPT_URL is not set. Please create a .env.local file with your Google Apps Script URL.');
-} else {
-  console.log('Google Apps Script URL configured:', GOOGLE_APPS_SCRIPT_URL.substring(0, 50) + '...');
+// Debug logging (dev only)
+if (import.meta.env.DEV) {
+  console.log('Google Apps Script URL:', GOOGLE_APPS_SCRIPT_URL ? 'Configured' : 'Missing');
+  if (!GOOGLE_APPS_SCRIPT_URL) {
+    console.warn('VITE_GOOGLE_APPS_SCRIPT_URL is not set. Please create a .env.local file with your Google Apps Script URL.');
+  } else {
+    console.log('Google Apps Script URL configured:', GOOGLE_APPS_SCRIPT_URL.substring(0, 50) + '...');
+  }
 }
 
 export interface WaitlistSubmission {
@@ -49,8 +49,10 @@ export async function submitWaitlist(data: WaitlistSubmission): Promise<ApiRespo
   }
 
   try {
-    console.log('Submitting waitlist:', { email: data.email, userType: data.userType });
-    console.log('URL:', GOOGLE_APPS_SCRIPT_URL);
+    if (import.meta.env.DEV) {
+      console.log('Submitting waitlist:', { email: data.email, userType: data.userType });
+      console.log('URL:', GOOGLE_APPS_SCRIPT_URL);
+    }
 
     // Google Apps Script web apps have CORS limitations
     // Use form submission to bypass CORS
@@ -136,8 +138,10 @@ export async function submitNewsletter(data: NewsletterSubmission): Promise<ApiR
   }
 
   try {
-    console.log('Submitting newsletter:', { email: data.email });
-    console.log('URL:', GOOGLE_APPS_SCRIPT_URL);
+    if (import.meta.env.DEV) {
+      console.log('Submitting newsletter:', { email: data.email });
+      console.log('URL:', GOOGLE_APPS_SCRIPT_URL);
+    }
 
     // Google Apps Script web apps have CORS limitations
     // Use form submission to bypass CORS
