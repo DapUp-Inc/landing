@@ -49,7 +49,7 @@ export function homeForRole(role: "director" | "athlete" | "brand" | null): stri
   if (role === "director") return "/director/athletes"; // changed from home
   if (role === "athlete")  return "/athlete/home";
   if (role === "brand")    return "/brand/home";
-  return "/login";
+  return "/";
 }
 
 /**

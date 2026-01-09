@@ -11,7 +11,6 @@ const LandingNav = () => {
     { name: 'How It Works', href: '#how-it-works', isLink: false },
     { name: 'For Brands', href: '#for-brands', isLink: false },
     { name: 'For Athletes', href: '#for-athletes', isLink: false },
-    { name: 'Pricing', href: '/pricing', isLink: true },
   ];
 
   return (
@@ -89,10 +88,10 @@ const LandingNav = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <Link
-          to="/login"
+          to="/waitlist"
           className="hidden md:flex px-5 py-2.5 xl2:px-6 xl2:py-3 xl2:text-base bg-primary-500 text-dark-900 font-semibold rounded-full transition-all duration-200 items-center hover:bg-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 whitespace-nowrap shadow-lg shadow-black/20"
         >
-          Login
+          Join waitlist
           <ArrowRight className="ml-2 w-4 h-4 xl2:w-5 xl2:h-5" />
         </Link>
       </motion.div>
@@ -143,11 +142,11 @@ const LandingNav = () => {
             
             <div className="pt-4 border-t border-white/10 space-y-3">
               <Link
-                to="/login"
+                to="/waitlist"
                 className="w-full px-4 py-3 bg-primary-500 text-dark-900 font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Login
+                Join waitlist
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>

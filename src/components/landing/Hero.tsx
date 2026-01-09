@@ -75,10 +75,10 @@ const Hero = () => {
 
             {/* CTA Button */}
             <button
-              onClick={() => navigate('/signup')}
+              onClick={() => navigate('/waitlist')}
               className="inline-flex items-center px-6 py-3 xl2:px-8 xl2:py-4 xl2:text-lg bg-primary-500 hover:bg-primary-600 text-dark-900 font-semibold rounded-lg transition-colors duration-200 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 mb-8 xl2:mb-10"
             >
-              Get Started
+              Join the Waitlist
             </button>
 
             {/* Clean Trust Indicators */}

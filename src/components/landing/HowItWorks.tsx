@@ -1,4 +1,5 @@
 import { Target, Zap, TrendingUp, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const steps = [
   {
@@ -84,10 +85,13 @@ const HowItWorks = () => {
 
         {/* Bottom CTA placeholder */}
         <div className="text-center mt-14 xl2:mt-16 2xl:mt-20">
-          <button type="button" className="inline-flex items-center px-5 py-3 xl2:px-8 xl2:py-4 xl2:text-lg bg-primary-500 text-dark-900 font-semibold rounded-lg" onClick={(e) => e.preventDefault()}>
-            Ready to get started?
+          <Link
+            to="/waitlist"
+            className="inline-flex items-center px-5 py-3 xl2:px-8 xl2:py-4 xl2:text-lg bg-primary-500 text-dark-900 font-semibold rounded-lg hover:bg-primary-400 transition-colors duration-200"
+          >
+            Join the waitlist
             <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

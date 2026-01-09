@@ -269,10 +269,7 @@ const SignupPage = () => {
 
               <div className="mt-6 text-center">
                 <p className="text-gray-400">
-                  Already have an account?{' '}
-                  <Link to="/login" className="text-primary-500 hover:text-primary-400 font-semibold transition-colors">
-                    Log in
-                  </Link>
+                  Already have an account? Login is temporarily unavailable.
                 </p>
               </div>
             </div>
@@ -456,10 +453,7 @@ const SignupPage = () => {
 
               <div className="mt-6 text-center">
                 <p className="text-gray-400">
-                  Already have an account?{' '}
-                  <Link to="/login" className="text-primary-500 hover:text-primary-400 font-semibold transition-colors">
-                    Log in
-                  </Link>
+                  Already have an account? Login is temporarily unavailable.
                 </p>
               </div>
             </div>
