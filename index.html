@@ -10,7 +10,17 @@
       /* Ensure fonts load with fallbacks */
       html { font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
     </style>
-    <title>DapUp</title>
+    <script>
+      // Restore original path after GitHub Pages SPA redirect
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          window.history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <title>DapUp - Landing</title>
   </head>
   <body>
     <div id="root"></div>
